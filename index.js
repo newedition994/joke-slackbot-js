@@ -39,6 +39,10 @@ function handleMessage(message) {
     chuckJoke();
   } else if (message.includes(" yomama")) {
     yoMamaJoke();
+  } else if (message.includes(" random")) {
+    randomJoke();
+  } else if (message.includes(" help")) {
+    runHelp();
   }
 }
 
@@ -66,4 +70,27 @@ function yoMamaJoke() {
 
     bot.postMessageToChannel("general", `Yo Momma: ${joke}`, params);
   });
+}
+
+// Tell a Random Joke
+function randomJoke() {
+  const rand = Math.floor(Math.random() * 2) + 1;
+  if (rand === 1) {
+    chuckJoke();
+  } else if (rand === 2) {
+    yoMamaJoke();
+  }
+}
+
+// Show Help Text
+function runHelp() {
+  const params = {
+    icon_emoji: ":question:"
+  };
+
+  bot.postMessageToChannel(
+    "general",
+    `Type @unicornjokebot with either 'chucknorris', 'yomama' or 'random' to get a joke`,
+    params
+  );
 }
