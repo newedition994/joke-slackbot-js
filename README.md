@@ -2,9 +2,9 @@
 
 ## APIs Used:
 
-yomomma: https://yomomma.info/
+[yomomma](https://yomomma.info/)
 
-chucknorris: http://www.icndb.com/api/
+[chucknorris](http://www.icndb.com/api/)
 
 ## Slackbot (slack-bot-api)
 
