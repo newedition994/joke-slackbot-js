@@ -7,3 +7,16 @@ const bot = new SlackBot({
   token: TOKEN,
   name: "unicornjokebot"
 });
+
+// Start Handler
+bot.on("start", () => {
+  const params = {
+    icon_emoji: ":smiley:"
+  };
+
+  bot.postMessageToChannel(
+    "general",
+    "Get ready to laugh guys with @unicornjokebot!",
+    params
+  );
+});
