@@ -20,3 +20,6 @@ bot.on("start", () => {
     params
   );
 });
+
+// Error Handler
+bot.on("error", err => console.log(err));
